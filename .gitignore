@@ -3,3 +3,8 @@
 ################################################################################
 
 /SQLiteReader/packages
+/SQLiteReader/.vs
+/SQLiteReader/SQLiteReader/bin/Debug
+/SQLiteReader/SQLiteReader/obj/Debug
+/SQLiteReader/SQLiteReader/bin/Release
+/SQLiteReader/SQLiteReader/obj/Release
