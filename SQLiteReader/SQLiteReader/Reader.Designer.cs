@@ -41,6 +41,7 @@ namespace SQLiteReader
             this.tableDataGridView = new System.Windows.Forms.DataGridView();
             this.messageTabPage = new System.Windows.Forms.TabPage();
             this.messageTextBox = new System.Windows.Forms.TextBox();
+            this.importProduceButton = new System.Windows.Forms.Button();
             this.resultTabControl.SuspendLayout();
             this.resultTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).BeginInit();
@@ -106,7 +107,7 @@ namespace SQLiteReader
             this.pathTextBox.Location = new System.Drawing.Point(180, 10);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(571, 29);
+            this.pathTextBox.Size = new System.Drawing.Size(488, 29);
             this.pathTextBox.TabIndex = 3;
             this.pathTextBox.WordWrap = false;
             this.pathTextBox.TextChanged += new System.EventHandler(this.pathTextBox_TextChanged);
@@ -221,12 +222,31 @@ namespace SQLiteReader
             this.messageTextBox.Size = new System.Drawing.Size(654, 206);
             this.messageTextBox.TabIndex = 0;
             // 
+            // importProduceButton
+            // 
+            this.importProduceButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.importProduceButton.AutoSize = true;
+            this.importProduceButton.BackColor = System.Drawing.Color.Sienna;
+            this.importProduceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.importProduceButton.FlatAppearance.BorderSize = 0;
+            this.importProduceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importProduceButton.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.importProduceButton.ForeColor = System.Drawing.Color.Black;
+            this.importProduceButton.Location = new System.Drawing.Point(673, 10);
+            this.importProduceButton.Name = "importProduceButton";
+            this.importProduceButton.Size = new System.Drawing.Size(83, 29);
+            this.importProduceButton.TabIndex = 8;
+            this.importProduceButton.Text = "匯入產製";
+            this.importProduceButton.UseVisualStyleBackColor = false;
+            this.importProduceButton.Click += new System.EventHandler(this.importProduceButton_Click);
+            // 
             // Reader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(854, 480);
+            this.Controls.Add(this.importProduceButton);
             this.Controls.Add(this.resultTabControl);
             this.Controls.Add(this.executeButton);
             this.Controls.Add(this.scriptTextBox);
@@ -265,6 +285,7 @@ namespace SQLiteReader
         private System.Windows.Forms.TabPage messageTabPage;
         private System.Windows.Forms.DataGridView tableDataGridView;
         private System.Windows.Forms.TextBox messageTextBox;
+        private System.Windows.Forms.Button importProduceButton;
     }
 }
 

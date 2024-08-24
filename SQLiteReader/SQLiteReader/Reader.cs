@@ -237,5 +237,29 @@ namespace SQLiteReader
                 this.tableListBox.ClearSelected();
             }
         }
+
+        /// <summary>
+        ///［匯入產製］按鈕事件
+        /// </summary>
+        private void importProduceButton_Click(object sender, EventArgs args)
+        {
+            try
+            {
+                OpenFileDialog browser = new OpenFileDialog();
+                browser.Title = "開啟檔案";
+                browser.Filter = "所有檔案|*.*|Log 檔案|*.log|Txt 檔案|*.txt";
+                DialogResult reslut = browser.ShowDialog();
+                if (reslut == DialogResult.OK)
+                {
+                    string filePath = browser.FileName;
+                    ImportProduce.run(filePath);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Console.WriteLine(e.ToString());
+            }
+        }
     }
 }
