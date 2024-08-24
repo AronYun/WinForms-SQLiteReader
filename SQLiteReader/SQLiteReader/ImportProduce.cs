@@ -27,7 +27,14 @@ namespace SQLiteReader
 
                     try
                     {
-                        SQLite sqlite = new SQLite(databaseName);
+                        if (machineNo.Equals(string.Empty) || databaseName.Equals(string.Empty) || sql.Equals(string.Empty))
+                        {
+                            throw new Exception("偵測到有數值為空字串");
+                        }
+
+                        string databasePath = Path.Combine("Output", machineNo, databaseName);
+                        SQLite sqlite = new SQLite(databasePath);
+                        sqlite.createDataBase();
                         createTable(sqlite);
                         sqlite.execute(sql);
                     }
